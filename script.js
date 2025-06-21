@@ -13,7 +13,9 @@ saveButton.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const localUsername = localStorage.getItem("local-username");
-    displayArea.innerText = greet(localUsername);
+    if (localUsername) {
+        displayArea.innerText = greet(localUsername);
+    }
 });
 
 function greet(name) {
